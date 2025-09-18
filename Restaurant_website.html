@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delightful Bites Restaurant</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff7ed;
+      color: #333;
+    }
+
+    header {
+      background: #ffb347;
+      padding: 20px 0;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    p{
+      font-size: 20px;
+      line-height: 1.6;
+      font-style: italic;
+      color: black;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    h2{
+      text-align: center;
+      margin-top: 50PX;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 12px 0 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      text-align: center;
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    nav a.active,
+    nav a:hover {
+      background: #fff3cd;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 32px auto;
+      padding: 24px;
+      background: #fffdfa;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(255, 179, 71, 0.1);
+    }
+
+    section {
+      padding: 100px 20px;
+      height: 100vh;
+    }
+
+    .content-section {
+      display: block;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .menu-item {
+      background: #ffe5b4;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(255,179,71,0.1);
+    }
+
+    .menu-item .price {
+      float: right;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #ffb347;
+      border: none;
+      border-radius: 6px;
+      color: black;
+      font-weight: bold;
+      font-size: large;    
+    }
+
+    button:hover {
+      background: #ffa500;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ffb347;
+      font-size: 1em;
+    }
+
+    footer {
+      background: #ffb347;
+      text-align: center;
+      padding: 14px 0;
+      margin-top: 40px;
+      font-size: 0.95em;
+      color: #303030;
+    }
+
+    @media (max-width: 600px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+      main {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Delightful Bites</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#bookyourtable">Book Your Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="content-section">
+      <h2>Welcome to Delightful Bites!</h2>
+      <p>Enjoy delicious, fresh, and exciting cuisine in the heart of the city.<br><br>
+        "Welcome to Delightful Bites - Where taste meets tradition."<br>
+        "Come hungry. Leave happy."<br>
+        "A seat at our table is waiting for you."
+      </p>
+      <button onclick="location.href='#menu'">See Our Menu</button>
+    </section>
+
+    <section id="menu" class="content-section">
+      <h2>Our Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Margherita Pizza</h3>
+          <p>Classic pizza with fresh tomatoes, mozzarella, and basil. <span class="price">₹199</span></p>
+        </div>
+        <div class="menu-item">
+          <h3>Chicken Alfredo Pasta</h3>
+          <p>Creamy alfredo sauce with grilled chicken and parmesan. <span class="price">₹299</span></p>
+        </div>
+        <div class="menu-item">
+          <h3>Caesar Salad</h3>
+          <p>Crisp romaine lettuce tossed with Caesar dressing, croutons, and parmesan. <span class="price">₹149</span></p>
+        </div>
+        <div class="menu-item">
+          <h3>Tiramisu</h3>
+          <p>Traditional Italian dessert with espresso-soaked ladyfingers. <span class="price">₹299</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="content-section">
+      <h2>About Us</h2>
+      <p>Delightful Bites is a family-owned restaurant founded in 2010, dedicated to serving fresh and flavorful dishes inspired by Italian cuisine. Our chefs use only the best ingredients for a memorable dining experience.<br><br>
+      Welcome to Delightful Bites!
+
+      We're here to serve delicious food made with fresh ingredients and lots of love. Whether you're stopping by for a quick bite, a family dinner, or a special celebration, we want you to feel right at home.<br><br>
+
+      Our team cares about good food and great service. Every dish on our menu is made with care to make sure you enjoy every bite.<br><br>
+
+      Thank you for choosing us — we're happy to have you here and hope to see you again soon!</p>
+    </section>
+
+    <section id="contact" class="content-section">
+      <h2>Contact Us</h2>
+      <form id="contactForm" onsubmit="alert('Message sent! 📬')">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="formMsg"></p>
+    </section>
+
+    <section id="bookyourtable" class="content-section">
+      <h2>Book Your Table</h2>
+      <form id="bookyourtable" onsubmit="alert('Booking successful! 🎉')">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="date" name="date" required>
+        <input type="time" name="time" required>
+        <input type="number" name="guests" placeholder="Number of Guests" required>
+         <button type="submit">Book Now</button>
+         <!-- <button onclick="alert('Booking successful!')">Book Now</button> -->
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Delightful Bites. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
